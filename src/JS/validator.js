@@ -18,9 +18,15 @@ const validator = {
 
       //Funcion interna para determinar si la cadena de texto donde va nuestra tarjeta solamente recibe numeros, retorna verdadero si solo hay numeros en la cadena
       // y retorna falso si hay algun punto, letra o caracter que no sea un numero
+<<<<<<< HEAD
       if (/^\d+$/.test(cardNumber)) {//
         for (let i = 0; i < cardNumber.length; i++) {
           creditCardNumber[i] = parseInt(cardNumber[i]);
+=======
+      if (/^\d+$/.test(cardNumber)) {
+        for (let i = 0; i < cardNumber.length; i++) {
+          creditCardNumber[i] = parseInt(creditCardNumber[i]);
+>>>>>>> ba1d3c97cd6a2d56cf3bfe2b0f682d3788ef054d
         }
 
         //Se hace la variable para almacenar la sumatoria
@@ -58,10 +64,17 @@ const validator = {
         } else return false
 
       } else {
+<<<<<<< HEAD
         return false
       }
     } else {
       return false
+=======
+        alert("Por favor introduzca solamente numeros enteros")
+      }
+    } else {
+      alert("Debe completar el total de 16 digitos")
+>>>>>>> ba1d3c97cd6a2d56cf3bfe2b0f682d3788ef054d
     }
 
   },
