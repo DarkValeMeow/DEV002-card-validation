@@ -11,7 +11,7 @@ Algoritmo de Luhn
 */
 const validator = {
   isValid: (cardNumber) => {
-    if (cardNumber.length == 16) {
+   
       //Se crea un arreglo vacio para ser rellenado con la tarjeta
       let creditCardNumber = [];
       //Se evalua si el campo esta rellenado con solamente numeros, de lo contrario soltara una alerta solicitando el llenado con numeros
@@ -28,12 +28,12 @@ const validator = {
         let sumatoria = 0;
 
         //Ciclo for para poder acceder a las posiciones del arreglo generado por la cadena de texto
-        for (let index = 0; index < creditCardNumber.length; index++) {
+        for (let index = 0 ; index < creditCardNumber.length; index++) {
           /* 
           Variable de control del ciclo index, se inicializa en 0 por ser el 
           inicio del arreglo y termina hasta la posicion 15 (longitud del arreglo), aumenta en 1 con cada iteracion    
           */
-          if (index % 2 == 0) { //Se buscan las posiciones pares del arreglo evaluando si son multiplos de 2.
+          if (index % 2 != 0) { //Se buscan las posiciones pares del arreglo evaluando si son multiplos de 2.
             creditCardNumber[index] *= 2 //Se duplica el elemento del arreglo en la posicion par dada por la variable index haciendo caso al algoritmo de Luhn 
             //Ejemplo numeroTarjeta[0] ← La posicion 0 del arreglo, numeroTarjeta[0]*=2 → numeroTarjeta[0] = numeroTarjeta[0]*2 
             //Con numeros en lugar de algebra numeroTarjeta[0] = 2, por lo tanto numeroTarjeta[0] = 2*2=4
@@ -61,15 +61,22 @@ const validator = {
       } else {
         return false
       }
-    } else {
-      return false
-    }
+
   },
 
   maskify: (cardNumber) =>{
-    if(cardNumber.length>4){
-      //
+    let numerosTarjeta =  cardNumber.toString().split(''); //Se obtiene el numero de la tarjeta y se parte en digitos 
+    //para generar un arreglo
+    if(cardNumber.length>4){ //Se evalua que sea mayor a 4 para reemplazar los digitos
+
+      for (let i = 0; i < numerosTarjeta.length-4; i++) { //Ciclo para recorrer el arreglo hasta su longitud -4. 
+            numerosTarjeta[i] = "#"; //Se reemplaza el digito con # para ocultarlo
+      }
+
+      numerosTarjeta = numerosTarjeta.join(''); //Se reune el arreglo en un string y se retorna 
+      return numerosTarjeta; 
     }
+    return numerosTarjeta.join(''); //Se reune el arreglo en un string y se retorna  (Sin transformar)
   }
 
 }

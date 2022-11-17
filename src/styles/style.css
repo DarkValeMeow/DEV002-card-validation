@@ -26,8 +26,8 @@
     align-self: center;
     box-shadow: 10px,10px,10px,black;
     border-width: 1px;
-    border-color: 'transparent';
-    border-radius:100px;
+    border-color: transparent;
+    border-radius:50%;
     background-color: #987cc0;
     padding: 6px;
     margin-top:6px;
@@ -52,8 +52,7 @@ main{
     background-color: #1e2022;
     display:flex;
     align-self: center;    
-    flex-direction: column;
-    
+    flex-direction: column;    
     border-radius: 24px;
     align-items: center;
     align-content: center;
@@ -118,6 +117,14 @@ h1{
     border-radius: 1rem;
     padding: 1rem;
 }
+h2,h3,h4{    
+    color: #C5ABE1;
+    background-color: #181a1a;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    justify-content: center;
+}
 .contenido{
     display: flex;
     flex-direction: column;
@@ -127,11 +134,46 @@ h1{
 }
 
 p{
-
     color: #A1998D;
     text-align: justify;
     padding: 1rem;
     background-color: #181a1a;
     margin:1.5rem;
     border-radius: 1rem;
+}
+
+.card{
+    box-sizing: content-box;
+    width: 24rem;
+    height: 12rem;
+    padding: 2rem;
+    background-color: #f2b0fc;
+    border-radius:1rem;
+    margin:1.2rem;
+}
+
+.card p{
+    text-align: center;
+    font-size: 1.6rem;
+    color: #181a1a;
+    background-color: transparent;
+    margin:1rem;
+}
+
+.formulario{
+    margin: 1.2rem;    
+    justify-content: center;
+}
+.formulario label{
+    margin: 1rem;
+    display:block;
+    width: 100%;
+
+}
+.formulario input{
+    
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    outline: none;
 }

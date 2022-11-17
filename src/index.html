@@ -21,7 +21,7 @@
       <div class="navbar-circle"><a href=""><img src="./img/twitter.png" alt="Twitter"></a></div>
       <div class="navbar-circle"><a href=""><img src="./img/telegram.png" alt="Telegram"></a></div>
     </nav>
-
+    </header>
     <main>
       <section class="seccion">
         <div class="container izq">
@@ -31,7 +31,7 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae modi eos doloremque, magnam natus illum
               quia fugiat consequuntur debitis quos laudantium quam tempore eius autem. Ullam nam aliquam tempore quod!</p>
           </div>
-        </div>
+
         </div>
 
       </section>
@@ -41,6 +41,18 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus ipsam ratione atque unde eaque
             provident earum eveniet incidunt, assumenda at hic maxime quam, mollitia laborum ipsa cumque in impedit
             voluptates!</p>
+          <div class="card">
+            <p id="card-num">XXXX XXXX XXXX XXXX</p>
+          </div>
+          
+          <form class="formulario">
+            <label for="cardNum"><h4>Introduce número de la tarjeta</h4></label>
+            <input type="text" pattern="[0-9]{0,16}" id="cardNum" maxlength="16">
+
+            <h2 style="margin: 1rem; text-align:center;"><label id="validate"></label></h2>
+
+       
+          </form>
         </div>
       </section>
       <section class="seccion sec3">
