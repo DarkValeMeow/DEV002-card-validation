@@ -11,6 +11,7 @@ Algoritmo de Luhn
 */
 const validator = {
   isValid: (cardNumber) => {
+  //
    
       //Se crea un arreglo vacio para ser rellenado con la tarjeta
       let creditCardNumber = [];
